@@ -10,6 +10,8 @@ app.include_router(health_router)
 app.include_router(demo_router)
 app.include_router(projects_router)
 app.include_router(http_demo_router)
+from .routers.dependency_demo import router as dependency_demo_router
+app.include_router(dependency_demo_router)
 
 @app.get("/")
 def read_root():
